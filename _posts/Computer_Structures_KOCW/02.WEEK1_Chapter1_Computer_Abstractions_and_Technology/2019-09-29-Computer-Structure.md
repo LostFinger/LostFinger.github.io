@@ -3,6 +3,8 @@ title: 1장 2강 Computer Abstractions and Technology
 tags: ['컴퓨터 구조']
 author: pilsoo lee
 show_author_profile: true
+mathjax: true
+mathjax_autoNumber: true
 ---
 
 
