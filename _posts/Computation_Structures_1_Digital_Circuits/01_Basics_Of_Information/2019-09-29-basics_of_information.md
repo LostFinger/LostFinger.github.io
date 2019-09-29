@@ -1,4 +1,7 @@
-# Basics of Information
+---
+title: 1.Basics of Information
+tags: Computation Structres, Digital Circuits
+---
 
 ## What is Information
 
