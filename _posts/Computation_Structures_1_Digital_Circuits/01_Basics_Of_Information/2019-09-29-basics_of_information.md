@@ -1,6 +1,7 @@
 ---
 title: 1.Basics of Information
 tags: ComputationStructres DigitalCircuits
+author : JeongHyeon
 ---
 
 ## What is Information
@@ -49,7 +50,8 @@ e.g., $I(Heart)$ = $log_2$($1 \over 13/52$) = 2 bits
 
 어떤 변수의 엔트로피란, 어떤 정보의 값에 대해 알았을 때 얻은 정보의 평균이다.
 
-![Entropy](entropy.jpg)
+<!-- ![Entropy](./entropy.jpg) -->
+<img class="image image--lg" src="./entropy.jpg"/>
 
 그래서, 엔트로피가 우리에게 무엇을 말해주는가?
 
