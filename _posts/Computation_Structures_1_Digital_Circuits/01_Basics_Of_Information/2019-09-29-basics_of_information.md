@@ -1,6 +1,6 @@
 ---
 title: 1.Basics of Information
-tags: Computation Structres, Digital Circuits
+tags: ComputationStructres DigitalCircuits
 ---
 
 ## What is Information
