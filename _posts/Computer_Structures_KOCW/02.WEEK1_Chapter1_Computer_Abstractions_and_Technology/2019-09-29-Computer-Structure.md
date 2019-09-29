@@ -95,8 +95,8 @@ show_author_profile: true
 <h4>2. Relative Performance</h4>
 
 1. Performance
-    > 1/Execution Time 으로 정의
-2. 성능은 P_x/P_y = E_x = E_y 로 상대적 성능을 표현할 수 있다. 
+    > $$1 \over Execution Time$$ 으로 정의
+2. 성능은 $$P_x \over P_y = E_x \over E_y$$로 상대적 성능을 표현할 수 있다.
 
 <h4>3. Measuring Execution Time</h4>
 
