@@ -1,0 +1,7 @@
+version: "3.5"
+
+services:
+  jekyll-text-theme_dev:
+    build:
+      context: ../../../../Downloads/jekyll-TeXt-theme-master/jekyll-TeXt-theme-master
+      dockerfile: Dockerfile.dev
