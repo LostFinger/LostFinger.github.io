@@ -1,4 +1,4 @@
----
+    ---
 title: 1.Basics of Information
 tags: ComputationStructres DigitalCircuits
 author : JeongHyeon
