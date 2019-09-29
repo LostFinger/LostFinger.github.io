@@ -1,5 +1,5 @@
 ---
-title: 스터디 목표
+title: 1장 1강 Computer Abstractions and Technology
 tags: 커리큘럼
 author: pilsoo lee
 show_author_profile: true

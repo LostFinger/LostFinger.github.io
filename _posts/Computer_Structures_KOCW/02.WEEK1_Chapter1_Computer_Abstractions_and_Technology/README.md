@@ -1,9 +1,10 @@
 ---
-title: 스터디 목표
+title: 1장 2강 Computer Abstractions and Technology
 tags: 커리큘럼
 author: pilsoo lee
 show_author_profile: true
 ---
+
 
 <h2>2차시 <a href="http://www.kocw.net/home/cview.do?lid=83030621fe62e08e">링크</a></h2>
 
@@ -35,7 +36,8 @@ show_author_profile: true
 2. Control
     > 프로세서의 다양한 컴포넌트를 컨트롤하는 것
 3. Cache Memory
-    > 데이터의 접근을 바로 하기 위한 작은 SRAM 메모리 공간
+    > 데이터의 접근을 바로 하기 위한 작은 SRAM 메모리 공간  
+    작을수록 빠르다. (원칙)
         
     
 <h4>3. Abstraction</h4>
