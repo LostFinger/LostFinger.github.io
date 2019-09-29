@@ -1,3 +1,8 @@
+---
+title: Curriculum
+tags: Curriculum
+---
+
 # 커리큘럼
 
 ## 정현
