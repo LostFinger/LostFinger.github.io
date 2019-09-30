@@ -16,7 +16,7 @@ pilsoo lee:
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
   github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
-jeonghyon ha:
+jeonghyeon ha:
   type      : # "person" (default), "organization"
   name      : 하정현
   url       :
