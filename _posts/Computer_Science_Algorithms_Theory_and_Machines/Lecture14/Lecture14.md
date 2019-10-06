@@ -1,0 +1,176 @@
+---
+title: 14장. 계산 이론 소개
+tags: ['컴퓨터 과학' '계산 이론']
+author: jeonghyeon ha
+show_author_profile: true
+mathjax: true
+mathjax_autoNumber: true
+---
+
+## Overview
+
+기본적인 질문
+
+* 컴퓨터는 무엇을 할 수 있는가?
+* 제한된 자원으로 컴퓨터는 무엇을 할 수 있는가?
+
+일반적인 접근
+
+* 특정 기계나 문제에 대해 말하지 않음
+* 최소의 추상화된 기계로 고려
+
+왜 계산 이론을 공부하는가?
+
+이론적으로...
+
+* 컴퓨테이션에 대한 깊은 이해
+* 모든 현대 컴퓨터의 기반
+* 순수 과학
+
+실제로는...
+
+* 웹서치
+* 연속회로
+* 컴파일러
+* 암호학
+* 데이터 압축
+* ...
+
+추상 기계
+
+* 계산에 대한 수학적 모델
+* 각 기계는 특정한 입-출력을 가지게 정의
+* 이 강의에서 : 결정적 유한 오토마타 Deterministic Finite Automata(DFAs)
+
+형식 언어
+
+* 문자열 집합
+* 각각 그것을 특징짓는 특정한 룰로 정의됨
+* 이 강의에서 : 정규표현식 Regular Expression(REs)
+
+## 정규표현식
+
+### 패턴 매칭
+
+정규표현식은 패턴 매칭에...
+
+패턴 매칭?
+
+#### 단백질 아미노산 문자열
+![protein](https://raw.githubusercontent.com/LostFinger/LostFinger.github.io/master/_posts/Computer_Science_Algorithms_Theory_and_Machines/Lecture14/protein.png)
+
+#### 이메일 어드레스
+
+* 문자열 집합 + @
+* 공백없는 소문자 집합 + .
+* 이전 단계의 반복(0..n)
+* com / edu
+
+#### 정규표현식 오퍼레이션
+
+* 빈 집합
+* 빈 문자열
+* 단일 문자 ( a )
+* 와일드카드 기호 ( . )
+* 괄호에 쌓인 정규표현식 ( (a) )
+* 둘 이상의 정규표현식의 합체(Concatenation)
+* 둘 이상의 정규표현식의 조합(Union) ( | )
+* 정규표현식의 폐쇄(?)(Closure)(어떤 횟수든) ( .* )
+
+![re](https://raw.githubusercontent.com/LostFinger/LostFinger.github.io/master/_posts/Computer_Science_Algorithms_Theory_and_Machines/Lecture14/re.png)
+
+와일드카드는 .
+클로저는 a*
+유니온은 |
+
+![reexample](https://raw.githubusercontent.com/LostFinger/LostFinger.github.io/master/_posts/Computer_Science_Algorithms_Theory_and_Machines/Lecture14/reexample.png)
+
+#### 정규표현식의 기능을 확장하는 추가 오퍼레이션
+
+* 1개 이상 ( .+ )
+* 문자열 분류 ( [A-Z] )
+* 정확히 몇 번 ( [0-9]{5} )
+* 몇 번 사이 ( a.{2,4}b )
+* 부정 ( [^abcde]{6} )
+* 공백 ( \s )
+
+![readd](https://raw.githubusercontent.com/LostFinger/LostFinger.github.io/master/_posts/Computer_Science_Algorithms_Theory_and_Machines/Lecture14/readd.png)
+
+사실 위 추가 오퍼레이션은 모두 shorthand이며, 반드시 필요한 건 아니다.  
+(a|b|c)(a|b|c)* -> (a-c)+  
+이렇게 바꿔주는 정도.  
+필수는 아니지만 유용하다.
+
+위의 이메일 어드레스를 정규표현식으로 바꿔보면
+
+[A-Z]+@([a-z]+\\.)+(edu/com)
+
+## Deterministic Finite Automata
+
+놀랍게도 이 간단한 머신은 우리가 문제를 푸는데 도움이 된다
+
+DFAs 정의
+
+패턴 매칭 문제를 해결하는 추상화된 기계
+
+* 길이 제한 없는 문자열 인풋
+* 각 문자를 하나씩 읽어서 왼쪽에서 오른쪽으로 이동
+* 문자열을 인식하면 "Y", 아니라면 "N"
+
+![dfa](https://raw.githubusercontent.com/LostFinger/LostFinger.github.io/master/_posts/Computer_Science_Algorithms_Theory_and_Machines/Lecture14/dfa.png)
+
+문자열 집합을 정의하는 데는 두 가지 방법이 있다.
+
+* 정규표현식
+* DFAs
+
+Remarkable fact. DFAs와 정규표현식은 동등하다.
+
+equivalence theorem
+
+어떤 정규 표현식이라도, 같은 문자열 집합을 나타내는 DFA가 존재
+어떤 DFA에 대해서든, 같은 문자열 집합에 맞는 정규 표현식이 존재
+
+결과 : 정규표현식 패턴 매칭 문제를 푸는 방법
+
+1. 주어진 정규표현식에 맞는 DFA를 만든다
+2. DFA를 수행해 시뮬레이션한다
+
+## 응용
+
+### GREP
+
+실용적인 어려움 : DFA는 기하급수적으로 많은 상태를 가짐
+
+좀 더 효과적인 알고리즘 : Nondeterministic Finite Automata(NFA)를 사용한다.
+
+"GREP" (Generalized Regular Expression Pattern Matcher)
+
+## 한계
+
+어떤 정규표현식으로도 나타내지 못하는 문자열
+
+* 같은 숫자를 가진 0과1의 비트스트링
+* 정규표현식을 나타내는 문자열
+* 소수를 나타내는 문자열
+* ...
+
+DFA도 같음.
+
+>DFA보다 강력한 추상 기계가 있는가?
+
+1-스택 DFA
+
+* 0과 1의 비트스트링, 정규표현식을 나타내는 문자열 등 표현 가능
+* ...
+
+>1-스택 DFA보다 강력한 추상 기계가 있는가?
+
+2-스택 DFA
+
+* 소수를 나타내는 문자열 등 표현 가능
+* ...
+
+>2-스택 DFA보다 강력한 기계가 있는가?
+
+그런 건 없다.

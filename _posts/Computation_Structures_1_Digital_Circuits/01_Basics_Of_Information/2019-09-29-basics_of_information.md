@@ -1,6 +1,6 @@
 ---
-title: 1.Basics of Information
-tags: ComputationStructres DigitalCircuits
+title: 1장. Basics of Information
+tags: '컴퓨터 구조' '디지털 회로'
 author : jeonghyeon ha
 ---
 
