@@ -1,5 +1,5 @@
 ---
-title: 14장. 계산 이론 소개
+title: 14장 계산 이론 소개
 tags: ['컴퓨터 과학' '계산 이론']
 author: jeonghyeon ha
 show_author_profile: true
