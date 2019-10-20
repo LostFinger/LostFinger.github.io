@@ -20,9 +20,9 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl :
-title   : LostFinger Study Group
+title   : LostFinger 스터디 그룹
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  스터디 공간
 
 
 ## => Language and Timezone
@@ -115,10 +115,10 @@ sharing:
     id: # AddThis pubid, e.g. ra-5xxxxxxxxxxx
 
 
-## => Comments
+## => Comment
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -127,11 +127,11 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    clientID    : 0a0b26102da01f0b7dc4 # GitHub Application Client ID
+    clientSecret: b076ee3139f367f2c5f8d0f0559defdc9d49dfcc # GitHub Application Client Secret
+    repository  : https://github.com/LostFinger/LostFinger.github.io # GitHub repo
+    owner       : Closet # GitHub repo owner
+    admin: HaJH # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
     # - your GitHub Id
 
   ## Valine
