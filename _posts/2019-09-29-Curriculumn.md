@@ -11,11 +11,11 @@ show_author_profile: true
 
 [컴퓨터 구조. 영남대학교, KOCW](http://www.kocw.net/home/search/kemView.do?kemId=1125218)
 
+[Computer Science: Algorithms, Theory, and Machines. Princeton, Coursera](https://www.coursera.org/learn/cs-algorithms-theory-machines/home/welcome)
+
 ----
 
->[Computer Science: Algorithms, Theory, and Machines. Princeton, Coursera](https://www.coursera.org/learn/cs-algorithms-theory-machines/home/welcome)
-
-[Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+>[Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 
 [Computation Structures 1: Digital Circuits](https://www.edx.org/course/computation-structures-part-1-digital-mitx-6-004-1x-0)
 
